@@ -8,7 +8,6 @@ LFLAGS =
 OUTPUT := output
 SRC := src
 INCLUDE := include
-LIB := lib
 
 AR = ar
 ARFLAGS := rcs
@@ -16,13 +15,11 @@ ARFLAGS := rcs
 MAIN := xmemtools
 SOURCEDIRS := $(shell find $(SRC) -type d)
 INCLUDEDIRS := $(shell find $(INCLUDE) -type d)
-LIBDIRS := $(shell find $(LIB) -type d)
 FIXPATH = $1
 RM = rm -rf
 MD := mkdir -p
 
 INCLUDES := $(patsubst %,-I%, $(INCLUDEDIRS:%/=%))
-LIBS := $(patsubst %,-L%, $(LIBDIRS:%/=%))
 SOURCES := $(wildcard $(patsubst %,%/*.c, $(SOURCEDIRS)))
 OBJECTS := $(SOURCES:.c=.o)
 OUTPUTMAIN := $(call FIXPATH,$(OUTPUT)/$(MAIN))
@@ -38,7 +35,7 @@ $(MAIN): $(OBJECTS)
 
 .c.o:
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
-	ctags -R $(SRC) $(INCLUDE) $(LIB)
+	ctags -R $(SRC) $(INCLUDE)
 
 .PHONY: clean
 clean:
