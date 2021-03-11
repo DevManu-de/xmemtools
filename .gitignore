@@ -10,4 +10,5 @@ output/*
 vgcore.*
 tags
 cscope.out
+src/test
 
