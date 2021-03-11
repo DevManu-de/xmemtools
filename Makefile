@@ -12,7 +12,7 @@ INCLUDE := include
 AR = ar
 ARFLAGS := rcs
 
-MAIN := xmemtools
+MAIN := libxmemtools
 SOURCEDIRS := $(shell find $(SRC) -type d)
 INCLUDEDIRS := $(shell find $(INCLUDE) -type d)
 FIXPATH = $1
@@ -43,10 +43,6 @@ clean:
 	$(RM) $(call FIXPATH,$(OBJECTS))
 	$(RM) $(MAIN).a
 	@echo Cleanup complete!
-
-run: all
-	./$(OUTPUTMAIN)
-	@echo Executing "run: all" complete
 
 
 #                     GNU GENERAL PUBLIC LICENSE
