@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "../include/xmemtools.h"
+#include "xmemtools.h"
 
 int main() {
 
