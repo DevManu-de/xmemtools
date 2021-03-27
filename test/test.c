@@ -4,7 +4,7 @@
 
 int main() {
 
-    void *tmp = xmalloc(10);
+    void *tmp = xmalloc(4 * Kib);
     xfree(tmp);
     
     tmp = xcalloc(10, 10);
