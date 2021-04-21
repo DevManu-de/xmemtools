@@ -13,6 +13,7 @@ void *xrealloc(void *pntr, size_t bytes);
 void xfree(void *pntr);
 
 void *xmemdup(void *pntr, size_t bytes);
+char *xstrdiff(char *s1, char *s2);
 
 #endif
 

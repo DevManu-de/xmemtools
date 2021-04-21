@@ -16,6 +16,9 @@ int main() {
     xfree(tmp);
     xfree(t);
     
+    char *a = "HEllo";
+    char *b = "Hello World";
+    char *c = xstrdiff (a, b);
 
     return 0;
 

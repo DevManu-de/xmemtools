@@ -20,6 +20,9 @@ xmemtools provides safer alternatives to memory functions like `malloc`
 
 All functions `assert` if allocation failed.
 
+### xstrdiff
+    compares 2 strings and returns a pointer to the first different char in s1.
+
 ## Usage
 
 All functions behave like their `stdlib.h` functions just that these add some safety.
