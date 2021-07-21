@@ -1,7 +1,6 @@
 #include "xmemtools.h"
 
 #include <assert.h>
-#include <stdlib.h>
 #include <string.h>
 
 void *xmalloc(size_t bytes) {
