@@ -9,5 +9,4 @@ output/*
 vgcore.*
 tags
 cscope.out
-
 test/test
