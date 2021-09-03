@@ -3,6 +3,12 @@
 
 #include "xmemtools.h"
 
+void success(const char *msg) {
+    
+    printf("SUCCESS: %s\n", msg);
+
+}
+
 void failed() {
     puts("FAILED");
     exit(1);
@@ -26,7 +32,13 @@ int main() {
     char *b = "Hello World";
     char *c = xstrdiff(a, b);
     if (strcmp(c, "Ello") == 0 && c - a == 1) {
-        return 0;
+        success("Passed strcmp");
     }
-    failed();
+
+#ifdef __SIZEOF_INT128__
+    uint128_t bigint = 1;
+    printf("%lu\n", sizeof(bigint));
+
+#endif
+    return 0;
 }
